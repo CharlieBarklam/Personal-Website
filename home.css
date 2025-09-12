@@ -12,9 +12,10 @@
 }
 
 body {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
-  animation-delay: 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    font-family: "Montserrat", sans-serif;
 }
 
 :root { 
@@ -30,7 +31,6 @@ header {
 }
 
 header ul {
-    font-family: "Montserrat", sans-serif;
     font-size: 10px;
     display: flex;
     height: 50px;
@@ -87,7 +87,6 @@ section {
 }
 
 .about-box {
-    font-family: "Montserrat", sans-serif;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -102,14 +101,13 @@ section {
 }
 
 #computing { 
-    background: linear-gradient(to right, #4386b3, #a3bff2);
+    background: linear-gradient(to right, #045489, #a3bff2);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     min-height: 100vh;
     max-height: 100vh;
     padding: 4rem;
-    font-family: "Montserrat", sans-serif;
 }
 
 #computing > .mt-box { grid-area: 1 / 1; }
@@ -216,6 +214,92 @@ section {
     width: 90%;
     margin-left: 10px;
 }
+
+#performance {
+    display: flex;
+    background: linear-gradient(to right, #f26037, #f07474);
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 0;
+    color: #ce2d00;
+}
+
+.top-box,
+.bottom-box {
+    flex: 1;
+    display: flex;
+    padding: 30px;
+}
+
+.top-text h2, .bottom-text h2 {
+    color: black;
+}
+
+.top-box {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: auto 17rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.top-pics {
+    grid-column: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-text {
+    grid-column: 2;
+    text-align: right;
+}
+
+.top-pics img {
+    max-height: 250px;
+    width: auto;
+    border-radius: 1%;
+    border: 5px solid #de590c;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+#video-logo {
+    max-height: 100px;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.bottom-box {
+    background: linear-gradient(to right, #f07474, #f26037);
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: 17rem auto;
+    gap: 2rem;
+}
+
+.bottom-pics {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bottom-pics img {
+    max-width: 200px;
+    max-height: 250px;
+    width: auto;
+    border-radius: 1%;
+    border: 5px solid #de590c;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.bottom-text {
+    grid-column: 1;
+    text-align: left;
+}
+
 
 footer {
     width: 100%;
