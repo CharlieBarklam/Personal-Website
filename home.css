@@ -22,6 +22,29 @@ body {
     --nav-h: 64px; 
 }
 
+img:not(a img) {
+    cursor: pointer;
+}
+
+#lightbox {
+    position: fixed;
+    display: flex;
+    top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 9999;
+    background: rgb(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.hidden {
+    display: none;
+}
+
+#lightbox img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
 header {
     width: 100%;
     position: fixed;
