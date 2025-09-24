@@ -7,6 +7,32 @@
         <link rel = "stylesheet" href = "index.css">
     </head>
     <body>
+        <section id="weather">
+            <h2>Weather</h2>
+            <div id="wx">Loading...</div>
+        </section>
+
+        <script>
+            (async () => {
+                try {
+                    const res = await fetch("/api/weather/current?query=London");
+                    if (!res.ok) throw new Error("Request Failed");
+                    const data = await res.json();
+
+                    const el = document.getElementById("wx");
+                    if (data.error) {
+                        el.textContent = data.error.info || "API error";
+                        return;
+                    }
+                    const t = data.current?.temperature;
+                    el.innerHTML = `<strong>${name}</strong>: ${t}oC`;
+                } catch (err) {
+                    document.getElementById("wx").textContent = "Could not load weather.";
+                }
+            })();
+        </script>
+
+
         <div class = "center-box">
             <a href = "home.html">
                 <img class = "logo" src = "pictures/name-logo.png"></img>
